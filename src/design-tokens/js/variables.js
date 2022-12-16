@@ -3,13 +3,13 @@
  * Generated on Fri, 16 Dec 2022 16:44:03 GMT
  */
 
-export const ColorFf8f82 = "#ff8f82";
+export const ColorPrimary = "#ff8f82";
 export const ColorF24c4b = "#fc4140";
 export const ColorE50914 = "#e50914";
 export const ColorRedmid = "#aa0612";
 export const Color700311 = "#700311";
 export const ColorReddark = "#3f0e0c";
-export const ColorE2e2e2 = "#e2e2e2";
+export const ColorBody = "#e2e2e2";
 export const ColorB5b5b5 = "#b5b5b5";
 export const Color888888 = "#888888";
 export const Color5a5a5a = "#5a5a5a";
@@ -40,7 +40,7 @@ export const Color001920 = "#001920";
 export const ColorRed1outline = "#e50914";
 export const ColorBlack = "#000000";
 export const ColorWhite = "#ffffff";
-export const FontH1 = {"fontSize":64,"textDecoration":"none","fontFamily":"Suisse Intl","fontWeight":600,"fontStyle":"normal","fontStretch":"normal","letterSpacing":0,"lineHeight":70,"paragraphIndent":0,"paragraphSpacing":0,"textCase":"none"};
+export const FontHeading1 = {"fontSize":64,"textDecoration":"none","fontFamily":"Suisse Intl","fontWeight":600,"fontStyle":"normal","fontStretch":"normal","letterSpacing":0,"lineHeight":70,"paragraphIndent":0,"paragraphSpacing":0,"textCase":"none"};
 export const FontBodytext = {"fontSize":14,"textDecoration":"none","fontFamily":"Suisse Intl","fontWeight":400,"fontStyle":"normal","fontStretch":"normal","letterSpacing":0,"lineHeight":16,"paragraphIndent":0,"paragraphSpacing":0,"textCase":"none"};
 export const FontH2 = {"fontSize":50,"textDecoration":"none","fontFamily":"Suisse Intl","fontWeight":400,"fontStyle":"normal","fontStretch":"normal","letterSpacing":0,"lineHeight":60,"paragraphIndent":0,"paragraphSpacing":0,"textCase":"none"};
 export const FontH3 = {"fontSize":32,"textDecoration":"none","fontFamily":"Suisse Intl","fontWeight":400,"fontStyle":"normal","fontStretch":"normal","letterSpacing":0,"lineHeight":42,"paragraphIndent":0,"paragraphSpacing":0,"textCase":"none"};
@@ -180,8 +180,8 @@ export const TypographyParagraphFontFamily = "Suisse Intl";
 export const TypographyParagraphFontWeight = 400;
 export const TypographyParagraphFontStyle = "normal";
 export const TypographyParagraphFontStretch = "normal";
-export const TypographyParagraphLetterSpacing = 0;
+export const SpacingSmall = 0;
 export const TypographyParagraphLineHeight = 24;
 export const TypographyParagraphParagraphIndent = 0;
-export const TypographyParagraphParagraphSpacing = 40;
+export const SpacingLarge = 40;
 export const TypographyParagraphTextCase = "none";
