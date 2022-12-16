@@ -1,0 +1,77 @@
+@import "../../design-tokens/css/_variables.css";
+
+:host {
+  display: block;
+}
+
+button {
+  font-family: 'Suisse Intl';
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #FFFFFF;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  display: inline-block;
+  display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px 16px 10px 10px;
+gap: 8px;
+
+}
+
+
+button.solid{
+  background: #C60C19;
+  border-radius: 3px;
+
+}
+
+button.outline{
+
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid ;
+border-radius: 3px;
+border-color: #E50914;
+color: #E50914;
+}
+
+button.ghost{
+  color: #C60C19;
+  padding: 0;
+border: none;
+background: none;
+}
+button.small {
+  font-size: 12px;
+  font-weight: 500;
+font-size: 14px;
+line-height: 24px;
+display: flex;
+padding: 10px 16px 10px 10px;
+gap: 8px;
+width: 125px;
+height: 37px;
+right: 1420px;
+bottom: 818px;
+}
+
+
+
+button.large {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.2px;
+  display: flex;
+padding: 10px 16px 10px 0px;
+gap: 8px;
+width: 266px;
+height: 55px;
+right: 1113px;
+bottom: 818px;
+}
+
