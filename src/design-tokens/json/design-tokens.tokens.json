@@ -625,7 +625,7 @@
     "button1": {
       "type": "custom-fontStyle",
       "value": {
-        "fontSize": 24,
+        "fontSize": 26,
         "textDecoration": "none",
         "fontFamily": "Suisse Intl",
         "fontWeight": 500,
