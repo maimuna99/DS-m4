@@ -1,3 +1,9 @@
 :host {
   display: block;
 }
+
+
+p {
+  font-size: var(--FontHeading1);
+  font-weight: 900;
+}

@@ -1,17 +1,17 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component , h } from '@stencil/core';
 
 @Component({
   tag: 'fire-paragraph',
   styleUrl: 'fire-paragraph.css',
-  shadow: true,
+  shadow: false,
 })
 export class FireParagraph {
 
   render() {
     return (
-      <Host>
+      <p>
         <slot></slot>
-      </Host>
+      </p>
     );
   }
 
