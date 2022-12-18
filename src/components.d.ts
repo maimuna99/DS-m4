@@ -13,21 +13,6 @@ export namespace Components {
     }
     interface HsGridColumn {
     }
-    interface HsIconDownload {
-        "size": string;
-    }
-    interface HsIconEye {
-        "size": string;
-    }
-    interface HsIconFacebook {
-        "size": string;
-    }
-    interface HsIconPhone {
-        "size": string;
-    }
-    interface HsIconSearch {
-        "size": string;
-    }
     interface HsRadio {
         /**
           * The unique name of the radio button group. Must match the `name` attribute of its parent `<hs-radio-group />`.
@@ -125,36 +110,6 @@ declare global {
         prototype: HTMLHsGridColumnElement;
         new (): HTMLHsGridColumnElement;
     };
-    interface HTMLHsIconDownloadElement extends Components.HsIconDownload, HTMLStencilElement {
-    }
-    var HTMLHsIconDownloadElement: {
-        prototype: HTMLHsIconDownloadElement;
-        new (): HTMLHsIconDownloadElement;
-    };
-    interface HTMLHsIconEyeElement extends Components.HsIconEye, HTMLStencilElement {
-    }
-    var HTMLHsIconEyeElement: {
-        prototype: HTMLHsIconEyeElement;
-        new (): HTMLHsIconEyeElement;
-    };
-    interface HTMLHsIconFacebookElement extends Components.HsIconFacebook, HTMLStencilElement {
-    }
-    var HTMLHsIconFacebookElement: {
-        prototype: HTMLHsIconFacebookElement;
-        new (): HTMLHsIconFacebookElement;
-    };
-    interface HTMLHsIconPhoneElement extends Components.HsIconPhone, HTMLStencilElement {
-    }
-    var HTMLHsIconPhoneElement: {
-        prototype: HTMLHsIconPhoneElement;
-        new (): HTMLHsIconPhoneElement;
-    };
-    interface HTMLHsIconSearchElement extends Components.HsIconSearch, HTMLStencilElement {
-    }
-    var HTMLHsIconSearchElement: {
-        prototype: HTMLHsIconSearchElement;
-        new (): HTMLHsIconSearchElement;
-    };
     interface HTMLHsRadioElement extends Components.HsRadio, HTMLStencilElement {
     }
     var HTMLHsRadioElement: {
@@ -231,11 +186,6 @@ declare global {
         "fire-paragraph": HTMLFireParagraphElement;
         "hs-grid": HTMLHsGridElement;
         "hs-grid-column": HTMLHsGridColumnElement;
-        "hs-icon-download": HTMLHsIconDownloadElement;
-        "hs-icon-eye": HTMLHsIconEyeElement;
-        "hs-icon-facebook": HTMLHsIconFacebookElement;
-        "hs-icon-phone": HTMLHsIconPhoneElement;
-        "hs-icon-search": HTMLHsIconSearchElement;
         "hs-radio": HTMLHsRadioElement;
         "hs-radio-button": HTMLHsRadioButtonElement;
         "hs-radio-button-group": HTMLHsRadioButtonGroupElement;
@@ -257,21 +207,6 @@ declare namespace LocalJSX {
         "columns"?: number;
     }
     interface HsGridColumn {
-    }
-    interface HsIconDownload {
-        "size"?: string;
-    }
-    interface HsIconEye {
-        "size"?: string;
-    }
-    interface HsIconFacebook {
-        "size"?: string;
-    }
-    interface HsIconPhone {
-        "size"?: string;
-    }
-    interface HsIconSearch {
-        "size"?: string;
     }
     interface HsRadio {
         /**
@@ -343,11 +278,6 @@ declare namespace LocalJSX {
         "fire-paragraph": FireParagraph;
         "hs-grid": HsGrid;
         "hs-grid-column": HsGridColumn;
-        "hs-icon-download": HsIconDownload;
-        "hs-icon-eye": HsIconEye;
-        "hs-icon-facebook": HsIconFacebook;
-        "hs-icon-phone": HsIconPhone;
-        "hs-icon-search": HsIconSearch;
         "hs-radio": HsRadio;
         "hs-radio-button": HsRadioButton;
         "hs-radio-button-group": HsRadioButtonGroup;
@@ -369,11 +299,6 @@ declare module "@stencil/core" {
             "fire-paragraph": LocalJSX.FireParagraph & JSXBase.HTMLAttributes<HTMLFireParagraphElement>;
             "hs-grid": LocalJSX.HsGrid & JSXBase.HTMLAttributes<HTMLHsGridElement>;
             "hs-grid-column": LocalJSX.HsGridColumn & JSXBase.HTMLAttributes<HTMLHsGridColumnElement>;
-            "hs-icon-download": LocalJSX.HsIconDownload & JSXBase.HTMLAttributes<HTMLHsIconDownloadElement>;
-            "hs-icon-eye": LocalJSX.HsIconEye & JSXBase.HTMLAttributes<HTMLHsIconEyeElement>;
-            "hs-icon-facebook": LocalJSX.HsIconFacebook & JSXBase.HTMLAttributes<HTMLHsIconFacebookElement>;
-            "hs-icon-phone": LocalJSX.HsIconPhone & JSXBase.HTMLAttributes<HTMLHsIconPhoneElement>;
-            "hs-icon-search": LocalJSX.HsIconSearch & JSXBase.HTMLAttributes<HTMLHsIconSearchElement>;
             "hs-radio": LocalJSX.HsRadio & JSXBase.HTMLAttributes<HTMLHsRadioElement>;
             "hs-radio-button": LocalJSX.HsRadioButton & JSXBase.HTMLAttributes<HTMLHsRadioButtonElement>;
             "hs-radio-button-group": LocalJSX.HsRadioButtonGroup & JSXBase.HTMLAttributes<HTMLHsRadioButtonGroupElement>;

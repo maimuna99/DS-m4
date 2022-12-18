@@ -1,4 +1,12 @@
 div {
   display: inline-flex;
   justify-content: flex-start;
+  height: 188.92px;
+
 }
+
+span{
+width: 144px;
+height: 188.92px;
+}
+
