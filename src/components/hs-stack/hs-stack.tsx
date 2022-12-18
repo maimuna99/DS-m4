@@ -1,8 +1,19 @@
 import { Component, h, Prop } from '@stencil/core';
 import { css } from '@emotion/css';
-import { SpacingLarge, SpacingSmall } from '../../design-tokens/js/variables.js';
+// import { SpacingLarge, SpacingSmall } from '../../design-tokens/js/variables.js';
 
-
+/**
+ * The `<hs-stack>` component is a layout component providing horizontal and vertical
+ * flow capabilities for all its children components and elements.
+ * 
+ * ### Example
+ * ```html
+ * <hs-stack orientation="vertical" gap="small">
+ *  <img src="test.png" />
+ *  <button>Save</button>
+ * </hs-stack>
+ * ```
+ */
 @Component({
   tag: 'hs-stack',
   styleUrl: 'hs-stack.css',
@@ -25,7 +36,7 @@ export class HsStack {
   gap: 'large' | 'small' | 'none' = 'small';
 
   stackStyle = css`
-    gap: ${this.gap === 'large' ? SpacingLarge.bottom : this.gap === 'small' ? SpacingSmall.bottom : 0}px;
+    gap: ${this.gap === 'large' ? "30px" : "5px" };
     flex-direction: ${this.orientation === 'horizontal' ? 'row' : 'column'};
   `;
 

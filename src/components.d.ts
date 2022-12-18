@@ -8,6 +8,9 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface FireParagraph {
     }
+    interface HsAvatar {
+        "image": string;
+    }
     interface HsGrid {
         "columns": number;
     }
@@ -98,6 +101,12 @@ declare global {
         prototype: HTMLFireParagraphElement;
         new (): HTMLFireParagraphElement;
     };
+    interface HTMLHsAvatarElement extends Components.HsAvatar, HTMLStencilElement {
+    }
+    var HTMLHsAvatarElement: {
+        prototype: HTMLHsAvatarElement;
+        new (): HTMLHsAvatarElement;
+    };
     interface HTMLHsGridElement extends Components.HsGrid, HTMLStencilElement {
     }
     var HTMLHsGridElement: {
@@ -184,6 +193,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "fire-paragraph": HTMLFireParagraphElement;
+        "hs-avatar": HTMLHsAvatarElement;
         "hs-grid": HTMLHsGridElement;
         "hs-grid-column": HTMLHsGridColumnElement;
         "hs-radio": HTMLHsRadioElement;
@@ -202,6 +212,9 @@ declare global {
 }
 declare namespace LocalJSX {
     interface FireParagraph {
+    }
+    interface HsAvatar {
+        "image"?: string;
     }
     interface HsGrid {
         "columns"?: number;
@@ -276,6 +289,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "fire-paragraph": FireParagraph;
+        "hs-avatar": HsAvatar;
         "hs-grid": HsGrid;
         "hs-grid-column": HsGridColumn;
         "hs-radio": HsRadio;
@@ -297,6 +311,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "fire-paragraph": LocalJSX.FireParagraph & JSXBase.HTMLAttributes<HTMLFireParagraphElement>;
+            "hs-avatar": LocalJSX.HsAvatar & JSXBase.HTMLAttributes<HTMLHsAvatarElement>;
             "hs-grid": LocalJSX.HsGrid & JSXBase.HTMLAttributes<HTMLHsGridElement>;
             "hs-grid-column": LocalJSX.HsGridColumn & JSXBase.HTMLAttributes<HTMLHsGridColumnElement>;
             "hs-radio": LocalJSX.HsRadio & JSXBase.HTMLAttributes<HTMLHsRadioElement>;

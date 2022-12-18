@@ -15,8 +15,7 @@ const Template = (args) => `
     .stack-item:nth-child(odd) { background-color: cornflowerblue; }
   </style>
   <hs-stack orientation="${args.orientation}" gap="${args.gap}">
-    <span class="stack-item span-1"> <img <img
-    src="https://bobbyhadz.com/images/blog/react-prevent-multiple-button-clicks/thumbnail.webp" width='144' height='144'/></span>
+    <span class="stack-item span-1"></span>
     <span class="stack-item span-2"></span>
     <span class="stack-item span-3"></span>
     <span class="stack-item span-4"></span>
