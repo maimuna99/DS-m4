@@ -16,62 +16,9 @@ export namespace Components {
     }
     interface HsGridColumn {
     }
-    interface HsRadio {
-        /**
-          * The unique name of the radio button group. Must match the `name` attribute of its parent `<hs-radio-group />`.
-         */
-        "name": any;
-        /**
-          * The particular value of this radio input item.
-         */
-        "value": any;
-    }
-    interface HsRadioButton {
-        "checked": any;
-        "value": any;
-    }
-    interface HsRadioButtonGroup {
-        "name": any;
-    }
-    interface HsRadioGroup {
-        /**
-          * Unique name to group these options under. Child radio inputs must feature the same `name` attribute value.
-         */
-        "name": any;
-        /**
-          * Based in the `Orientation` ambient type, will display the radio group stacked vertically or horizontally. See {@link Orientation}
-         */
-        "orientation": Orientation;
-        /**
-          * Default value, which will preselect the matching radio element.
-         */
-        "selectedValue": any;
-    }
     interface HsStack {
-        /**
-          * The `gap` property sets the spacing in between elements, and has no effect in the leading or trailing element.
-         */
-        "gap": 'large' | 'small' | 'none';
-        /**
-          * The `orientation` property sets the direction for the flow, either vertical or horizontal.
-         */
-        "orientation": Orientation;
-    }
-    interface HsTab {
-        "toggleSelected": (selected: boolean) => Promise<void>;
-    }
-    interface HsTabList {
-    }
-    interface HsTabPanel {
-        "toggleSelected": (selected: boolean) => Promise<void>;
-    }
-    interface HsTabPanels {
-    }
-    interface HsTabs {
-        /**
-          * Configures the tab/panels to select by default upon loading.
-         */
-        "selectedIndex": number;
+        "direction": 'col' | 'row';
+        "spacing": string;
     }
     interface NfButton {
         "size": string;
@@ -81,14 +28,6 @@ export namespace Components {
         "level": number;
         "textAlign": 'left' | 'right' | 'center';
     }
-}
-export interface HsRadioButtonGroupCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLHsRadioButtonGroupElement;
-}
-export interface HsTabCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLHsTabElement;
 }
 export interface NfButtonCustomEvent<T> extends CustomEvent<T> {
     detail: T;
@@ -119,65 +58,11 @@ declare global {
         prototype: HTMLHsGridColumnElement;
         new (): HTMLHsGridColumnElement;
     };
-    interface HTMLHsRadioElement extends Components.HsRadio, HTMLStencilElement {
-    }
-    var HTMLHsRadioElement: {
-        prototype: HTMLHsRadioElement;
-        new (): HTMLHsRadioElement;
-    };
-    interface HTMLHsRadioButtonElement extends Components.HsRadioButton, HTMLStencilElement {
-    }
-    var HTMLHsRadioButtonElement: {
-        prototype: HTMLHsRadioButtonElement;
-        new (): HTMLHsRadioButtonElement;
-    };
-    interface HTMLHsRadioButtonGroupElement extends Components.HsRadioButtonGroup, HTMLStencilElement {
-    }
-    var HTMLHsRadioButtonGroupElement: {
-        prototype: HTMLHsRadioButtonGroupElement;
-        new (): HTMLHsRadioButtonGroupElement;
-    };
-    interface HTMLHsRadioGroupElement extends Components.HsRadioGroup, HTMLStencilElement {
-    }
-    var HTMLHsRadioGroupElement: {
-        prototype: HTMLHsRadioGroupElement;
-        new (): HTMLHsRadioGroupElement;
-    };
     interface HTMLHsStackElement extends Components.HsStack, HTMLStencilElement {
     }
     var HTMLHsStackElement: {
         prototype: HTMLHsStackElement;
         new (): HTMLHsStackElement;
-    };
-    interface HTMLHsTabElement extends Components.HsTab, HTMLStencilElement {
-    }
-    var HTMLHsTabElement: {
-        prototype: HTMLHsTabElement;
-        new (): HTMLHsTabElement;
-    };
-    interface HTMLHsTabListElement extends Components.HsTabList, HTMLStencilElement {
-    }
-    var HTMLHsTabListElement: {
-        prototype: HTMLHsTabListElement;
-        new (): HTMLHsTabListElement;
-    };
-    interface HTMLHsTabPanelElement extends Components.HsTabPanel, HTMLStencilElement {
-    }
-    var HTMLHsTabPanelElement: {
-        prototype: HTMLHsTabPanelElement;
-        new (): HTMLHsTabPanelElement;
-    };
-    interface HTMLHsTabPanelsElement extends Components.HsTabPanels, HTMLStencilElement {
-    }
-    var HTMLHsTabPanelsElement: {
-        prototype: HTMLHsTabPanelsElement;
-        new (): HTMLHsTabPanelsElement;
-    };
-    interface HTMLHsTabsElement extends Components.HsTabs, HTMLStencilElement {
-    }
-    var HTMLHsTabsElement: {
-        prototype: HTMLHsTabsElement;
-        new (): HTMLHsTabsElement;
     };
     interface HTMLNfButtonElement extends Components.NfButton, HTMLStencilElement {
     }
@@ -196,16 +81,7 @@ declare global {
         "hs-avatar": HTMLHsAvatarElement;
         "hs-grid": HTMLHsGridElement;
         "hs-grid-column": HTMLHsGridColumnElement;
-        "hs-radio": HTMLHsRadioElement;
-        "hs-radio-button": HTMLHsRadioButtonElement;
-        "hs-radio-button-group": HTMLHsRadioButtonGroupElement;
-        "hs-radio-group": HTMLHsRadioGroupElement;
         "hs-stack": HTMLHsStackElement;
-        "hs-tab": HTMLHsTabElement;
-        "hs-tab-list": HTMLHsTabListElement;
-        "hs-tab-panel": HTMLHsTabPanelElement;
-        "hs-tab-panels": HTMLHsTabPanelsElement;
-        "hs-tabs": HTMLHsTabsElement;
         "nf-button": HTMLNfButtonElement;
         "nf-header": HTMLNfHeaderElement;
     }
@@ -221,62 +97,9 @@ declare namespace LocalJSX {
     }
     interface HsGridColumn {
     }
-    interface HsRadio {
-        /**
-          * The unique name of the radio button group. Must match the `name` attribute of its parent `<hs-radio-group />`.
-         */
-        "name"?: any;
-        /**
-          * The particular value of this radio input item.
-         */
-        "value"?: any;
-    }
-    interface HsRadioButton {
-        "checked"?: any;
-        "value"?: any;
-    }
-    interface HsRadioButtonGroup {
-        "name"?: any;
-        "onValueChange"?: (event: HsRadioButtonGroupCustomEvent<any>) => void;
-    }
-    interface HsRadioGroup {
-        /**
-          * Unique name to group these options under. Child radio inputs must feature the same `name` attribute value.
-         */
-        "name"?: any;
-        /**
-          * Based in the `Orientation` ambient type, will display the radio group stacked vertically or horizontally. See {@link Orientation}
-         */
-        "orientation"?: Orientation;
-        /**
-          * Default value, which will preselect the matching radio element.
-         */
-        "selectedValue"?: any;
-    }
     interface HsStack {
-        /**
-          * The `gap` property sets the spacing in between elements, and has no effect in the leading or trailing element.
-         */
-        "gap"?: 'large' | 'small' | 'none';
-        /**
-          * The `orientation` property sets the direction for the flow, either vertical or horizontal.
-         */
-        "orientation"?: Orientation;
-    }
-    interface HsTab {
-        "onTabClick"?: (event: HsTabCustomEvent<any>) => void;
-    }
-    interface HsTabList {
-    }
-    interface HsTabPanel {
-    }
-    interface HsTabPanels {
-    }
-    interface HsTabs {
-        /**
-          * Configures the tab/panels to select by default upon loading.
-         */
-        "selectedIndex"?: number;
+        "direction"?: 'col' | 'row';
+        "spacing"?: string;
     }
     interface NfButton {
         "onClicked"?: (event: NfButtonCustomEvent<any>) => void;
@@ -292,16 +115,7 @@ declare namespace LocalJSX {
         "hs-avatar": HsAvatar;
         "hs-grid": HsGrid;
         "hs-grid-column": HsGridColumn;
-        "hs-radio": HsRadio;
-        "hs-radio-button": HsRadioButton;
-        "hs-radio-button-group": HsRadioButtonGroup;
-        "hs-radio-group": HsRadioGroup;
         "hs-stack": HsStack;
-        "hs-tab": HsTab;
-        "hs-tab-list": HsTabList;
-        "hs-tab-panel": HsTabPanel;
-        "hs-tab-panels": HsTabPanels;
-        "hs-tabs": HsTabs;
         "nf-button": NfButton;
         "nf-header": NfHeader;
     }
@@ -314,16 +128,7 @@ declare module "@stencil/core" {
             "hs-avatar": LocalJSX.HsAvatar & JSXBase.HTMLAttributes<HTMLHsAvatarElement>;
             "hs-grid": LocalJSX.HsGrid & JSXBase.HTMLAttributes<HTMLHsGridElement>;
             "hs-grid-column": LocalJSX.HsGridColumn & JSXBase.HTMLAttributes<HTMLHsGridColumnElement>;
-            "hs-radio": LocalJSX.HsRadio & JSXBase.HTMLAttributes<HTMLHsRadioElement>;
-            "hs-radio-button": LocalJSX.HsRadioButton & JSXBase.HTMLAttributes<HTMLHsRadioButtonElement>;
-            "hs-radio-button-group": LocalJSX.HsRadioButtonGroup & JSXBase.HTMLAttributes<HTMLHsRadioButtonGroupElement>;
-            "hs-radio-group": LocalJSX.HsRadioGroup & JSXBase.HTMLAttributes<HTMLHsRadioGroupElement>;
             "hs-stack": LocalJSX.HsStack & JSXBase.HTMLAttributes<HTMLHsStackElement>;
-            "hs-tab": LocalJSX.HsTab & JSXBase.HTMLAttributes<HTMLHsTabElement>;
-            "hs-tab-list": LocalJSX.HsTabList & JSXBase.HTMLAttributes<HTMLHsTabListElement>;
-            "hs-tab-panel": LocalJSX.HsTabPanel & JSXBase.HTMLAttributes<HTMLHsTabPanelElement>;
-            "hs-tab-panels": LocalJSX.HsTabPanels & JSXBase.HTMLAttributes<HTMLHsTabPanelsElement>;
-            "hs-tabs": LocalJSX.HsTabs & JSXBase.HTMLAttributes<HTMLHsTabsElement>;
             "nf-button": LocalJSX.NfButton & JSXBase.HTMLAttributes<HTMLNfButtonElement>;
             "nf-header": LocalJSX.NfHeader & JSXBase.HTMLAttributes<HTMLNfHeaderElement>;
         }
