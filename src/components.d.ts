@@ -8,24 +8,10 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface FireParagraph {
     }
-    interface HsButton {
-        "size": string;
-        "variant": string;
-    }
     interface HsGrid {
         "columns": number;
     }
     interface HsGridColumn {
-    }
-    interface HsHeader {
-        /**
-          * The `level` property allows users to indicate what header hierarchy this element is. It mus take a number from `1` to `6`.
-         */
-        "level": number;
-        /**
-          * Provides support for implementing horizontal alignment to the text contained in the header.
-         */
-        "textAlign": 'left' | 'right' | 'center';
     }
     interface HsIconDownload {
         "size": string;
@@ -99,10 +85,14 @@ export namespace Components {
          */
         "selectedIndex": number;
     }
-}
-export interface HsButtonCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLHsButtonElement;
+    interface NfButton {
+        "size": string;
+        "variant": string;
+    }
+    interface NfHeader {
+        "level": number;
+        "textAlign": 'left' | 'right' | 'center';
+    }
 }
 export interface HsRadioButtonGroupCustomEvent<T> extends CustomEvent<T> {
     detail: T;
@@ -112,18 +102,16 @@ export interface HsTabCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLHsTabElement;
 }
+export interface NfButtonCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLNfButtonElement;
+}
 declare global {
     interface HTMLFireParagraphElement extends Components.FireParagraph, HTMLStencilElement {
     }
     var HTMLFireParagraphElement: {
         prototype: HTMLFireParagraphElement;
         new (): HTMLFireParagraphElement;
-    };
-    interface HTMLHsButtonElement extends Components.HsButton, HTMLStencilElement {
-    }
-    var HTMLHsButtonElement: {
-        prototype: HTMLHsButtonElement;
-        new (): HTMLHsButtonElement;
     };
     interface HTMLHsGridElement extends Components.HsGrid, HTMLStencilElement {
     }
@@ -136,12 +124,6 @@ declare global {
     var HTMLHsGridColumnElement: {
         prototype: HTMLHsGridColumnElement;
         new (): HTMLHsGridColumnElement;
-    };
-    interface HTMLHsHeaderElement extends Components.HsHeader, HTMLStencilElement {
-    }
-    var HTMLHsHeaderElement: {
-        prototype: HTMLHsHeaderElement;
-        new (): HTMLHsHeaderElement;
     };
     interface HTMLHsIconDownloadElement extends Components.HsIconDownload, HTMLStencilElement {
     }
@@ -233,12 +215,22 @@ declare global {
         prototype: HTMLHsTabsElement;
         new (): HTMLHsTabsElement;
     };
+    interface HTMLNfButtonElement extends Components.NfButton, HTMLStencilElement {
+    }
+    var HTMLNfButtonElement: {
+        prototype: HTMLNfButtonElement;
+        new (): HTMLNfButtonElement;
+    };
+    interface HTMLNfHeaderElement extends Components.NfHeader, HTMLStencilElement {
+    }
+    var HTMLNfHeaderElement: {
+        prototype: HTMLNfHeaderElement;
+        new (): HTMLNfHeaderElement;
+    };
     interface HTMLElementTagNameMap {
         "fire-paragraph": HTMLFireParagraphElement;
-        "hs-button": HTMLHsButtonElement;
         "hs-grid": HTMLHsGridElement;
         "hs-grid-column": HTMLHsGridColumnElement;
-        "hs-header": HTMLHsHeaderElement;
         "hs-icon-download": HTMLHsIconDownloadElement;
         "hs-icon-eye": HTMLHsIconEyeElement;
         "hs-icon-facebook": HTMLHsIconFacebookElement;
@@ -254,30 +246,17 @@ declare global {
         "hs-tab-panel": HTMLHsTabPanelElement;
         "hs-tab-panels": HTMLHsTabPanelsElement;
         "hs-tabs": HTMLHsTabsElement;
+        "nf-button": HTMLNfButtonElement;
+        "nf-header": HTMLNfHeaderElement;
     }
 }
 declare namespace LocalJSX {
     interface FireParagraph {
     }
-    interface HsButton {
-        "onClicked"?: (event: HsButtonCustomEvent<any>) => void;
-        "size"?: string;
-        "variant"?: string;
-    }
     interface HsGrid {
         "columns"?: number;
     }
     interface HsGridColumn {
-    }
-    interface HsHeader {
-        /**
-          * The `level` property allows users to indicate what header hierarchy this element is. It mus take a number from `1` to `6`.
-         */
-        "level"?: number;
-        /**
-          * Provides support for implementing horizontal alignment to the text contained in the header.
-         */
-        "textAlign"?: 'left' | 'right' | 'center';
     }
     interface HsIconDownload {
         "size"?: string;
@@ -351,12 +330,19 @@ declare namespace LocalJSX {
          */
         "selectedIndex"?: number;
     }
+    interface NfButton {
+        "onClicked"?: (event: NfButtonCustomEvent<any>) => void;
+        "size"?: string;
+        "variant"?: string;
+    }
+    interface NfHeader {
+        "level"?: number;
+        "textAlign"?: 'left' | 'right' | 'center';
+    }
     interface IntrinsicElements {
         "fire-paragraph": FireParagraph;
-        "hs-button": HsButton;
         "hs-grid": HsGrid;
         "hs-grid-column": HsGridColumn;
-        "hs-header": HsHeader;
         "hs-icon-download": HsIconDownload;
         "hs-icon-eye": HsIconEye;
         "hs-icon-facebook": HsIconFacebook;
@@ -372,6 +358,8 @@ declare namespace LocalJSX {
         "hs-tab-panel": HsTabPanel;
         "hs-tab-panels": HsTabPanels;
         "hs-tabs": HsTabs;
+        "nf-button": NfButton;
+        "nf-header": NfHeader;
     }
 }
 export { LocalJSX as JSX };
@@ -379,10 +367,8 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "fire-paragraph": LocalJSX.FireParagraph & JSXBase.HTMLAttributes<HTMLFireParagraphElement>;
-            "hs-button": LocalJSX.HsButton & JSXBase.HTMLAttributes<HTMLHsButtonElement>;
             "hs-grid": LocalJSX.HsGrid & JSXBase.HTMLAttributes<HTMLHsGridElement>;
             "hs-grid-column": LocalJSX.HsGridColumn & JSXBase.HTMLAttributes<HTMLHsGridColumnElement>;
-            "hs-header": LocalJSX.HsHeader & JSXBase.HTMLAttributes<HTMLHsHeaderElement>;
             "hs-icon-download": LocalJSX.HsIconDownload & JSXBase.HTMLAttributes<HTMLHsIconDownloadElement>;
             "hs-icon-eye": LocalJSX.HsIconEye & JSXBase.HTMLAttributes<HTMLHsIconEyeElement>;
             "hs-icon-facebook": LocalJSX.HsIconFacebook & JSXBase.HTMLAttributes<HTMLHsIconFacebookElement>;
@@ -398,6 +384,8 @@ declare module "@stencil/core" {
             "hs-tab-panel": LocalJSX.HsTabPanel & JSXBase.HTMLAttributes<HTMLHsTabPanelElement>;
             "hs-tab-panels": LocalJSX.HsTabPanels & JSXBase.HTMLAttributes<HTMLHsTabPanelsElement>;
             "hs-tabs": LocalJSX.HsTabs & JSXBase.HTMLAttributes<HTMLHsTabsElement>;
+            "nf-button": LocalJSX.NfButton & JSXBase.HTMLAttributes<HTMLNfButtonElement>;
+            "nf-header": LocalJSX.NfHeader & JSXBase.HTMLAttributes<HTMLNfHeaderElement>;
         }
     }
 }

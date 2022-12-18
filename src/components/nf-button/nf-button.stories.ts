@@ -32,9 +32,9 @@ export default {
  * can later on customize with different values for its attribute properties and events
  */
 const Template = (args) => `
-  <hs-button variant="${args.variant}" size="${args.size}">
+  <nf-button variant="${args.variant}" size="${args.size}">
     ${args.text}
-  </hs-button>
+  </nf-button>
 `;
 
 /**
@@ -46,9 +46,9 @@ const Template = (args) => `
  */
 export const Button = Template.bind({});
 Button.args = {
-  text: 'Button',
-  variant: 'neutral',
-  size: 'medium',
+  text: 'Get Started ',
+  variant: 'solid',
+  size: 'large',
 };
 
 // export const RedButton = Template.bind({});

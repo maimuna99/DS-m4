@@ -1,6 +1,6 @@
 {
   "color": {
-    "#ff8f82": {
+    "white-color": {
       "description": "",
       "type": "color",
       "value": "#ff8f82ff",
@@ -12,7 +12,7 @@
         }
       }
     },
-    "#f24c4b": {
+    "light-red-color": {
       "description": "",
       "type": "color",
       "value": "#fc4140ff",
@@ -24,7 +24,7 @@
         }
       }
     },
-    "#e50914": {
+    "red-color": {
       "description": "",
       "type": "color",
       "value": "#e50914ff",
@@ -36,7 +36,7 @@
         }
       }
     },
-    "redmid": {
+    "mid-red-color": {
       "description": "",
       "type": "color",
       "value": "#aa0612ff",
@@ -48,7 +48,7 @@
         }
       }
     },
-    "#700311": {
+    "dark-red-color": {
       "description": "",
       "type": "color",
       "value": "#700311ff",
@@ -60,19 +60,8 @@
         }
       }
     },
-    "reddark": {
-      "description": "",
-      "type": "color",
-      "value": "#3f0e0cff",
-      "blendMode": "normal",
-      "extensions": {
-        "org.lukasoppermann.figmaDesignTokens": {
-          "styleId": "S:54a108648b02fd8ce9edf04aab9c329c06c7549d,",
-          "exportKey": "color"
-        }
-      }
-    },
-    "#e2e2e2": {
+    
+    "light-grey-color": {
       "description": "",
       "type": "color",
       "value": "#e2e2e2ff",
@@ -84,7 +73,7 @@
         }
       }
     },
-    "#b5b5b5": {
+    "mid-grey-color": {
       "description": "",
       "type": "color",
       "value": "#b5b5b5ff",
@@ -96,19 +85,7 @@
         }
       }
     },
-    "#888888": {
-      "description": "",
-      "type": "color",
-      "value": "#888888ff",
-      "blendMode": "normal",
-      "extensions": {
-        "org.lukasoppermann.figmaDesignTokens": {
-          "styleId": "S:c82c600206542f6ffde52c32604ed400d455ce53,",
-          "exportKey": "color"
-        }
-      }
-    },
-    "#5a5a5a": {
+    "dark-grey-color": {
       "description": "",
       "type": "color",
       "value": "#5a5a5aff",
@@ -120,7 +97,7 @@
         }
       }
     },
-    "#2d2d2d": {
+    "grey-black-color": {
       "description": "",
       "type": "color",
       "value": "#2d2d2dff",
@@ -132,7 +109,7 @@
         }
       }
     },
-    "#000000": {
+    "black-color": {
       "description": "",
       "type": "color",
       "value": "#000000ff",
@@ -144,7 +121,7 @@
         }
       }
     },
-    "#ffe478": {
+    "yellow-color": {
       "description": "",
       "type": "color",
       "value": "#ffe478ff",

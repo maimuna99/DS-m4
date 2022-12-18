@@ -4,7 +4,7 @@
  * populate the testing stories following the instructions below.
  */
 
-export default {
+ export default {
   // This creates a ‘Components’ folder and a subfolder with the MyComponent menu item
   // of in Storybook's side menu. Replace 'MyComponent' by the generic component name.
   title: 'Components/Typography/Header',
@@ -13,9 +13,8 @@ export default {
   argTypes: {
     text: {
       description: 'Transcluded text to be injected in the component slot',
-      defaultValue: 'Lorem ipsum dolor sit amet',
+      defaultValue: 'Unlimited movies, TV shows, and more.',
       control: { type: 'text' },
-      default:'H1',
     },
     textAlign: {
       options: ['left', 'center', 'right'],
@@ -23,18 +22,13 @@ export default {
       description: 'The header alignment',
     },
     level: {
-      options: ['H1', 'H2', 'H3', 'H4', 'H5', 'H6'],
-      control: { type: 'select' },
-      description: 'The header level',
+      control: {
+        type: 'number',
+        min: 1,
+        max: 6,
+      },
+      description: 'The header level (h1-h6)',
     },
-    // level: {
-    //   control: {
-    //     type: 'number',
-    //     min: 1,
-    //     max: 6,
-    //   },
-    //   description: 'The header level (h1-h6)',
-    // },
   }
 };
 
@@ -43,9 +37,9 @@ export default {
  * can later on customize with different values for its attribute properties and events
  */
 const Template = (args) => `
-  <hs-header level="${args.level}" text-align="${args.textAlign}">
+  <nf-header level="${args.level}" text-align="${args.textAlign}">
     ${args.text}
-  </hs-header>
+  </nf-header>
 `;
 
 /**
@@ -58,6 +52,6 @@ const Template = (args) => `
  */
 export const ComponentStory = Template.bind({});
 ComponentStory.args = {
-  textAlign: 'center',
-  level: 'H1',
+  textAlign: 'left',
+  level: 1,
 };
