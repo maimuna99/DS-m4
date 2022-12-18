@@ -1,6 +1,6 @@
 import { Component, h, Prop, Element } from '@stencil/core';
-import { css } from '@emotion/css';
-import { ColorPrimary, ColorBody, FontHeading1 } from '../../design-tokens/js/variables.js';
+// import { css } from '@emotion/css';
+// import { ColorPrimary, ColorBody, FontHeading1 } from '../../design-tokens/js/variables.js';
 
 /**
  * Use this array as a pivotal collection of Host attributes to remove.
@@ -67,7 +67,7 @@ export class HsHeader {
    * Provides support for implementing horizontal alignment to the text contained in the header.
    */
   @Prop({ reflect: true })
-  textAlign: 'left' | 'right' | 'center' = 'left'; // This annotation is a TypeScript union type with a default value set to 'left'
+  textAlign: 'left' | 'right' | 'center' = 'right'; // This annotation is a TypeScript union type with a default value set to 'left'
 
   /**
    * This is a class field. It is not visible as a property since it lacks
@@ -118,16 +118,16 @@ export class HsHeader {
      * from our set of Design Tokens traspiled into JS constants. This is a convenient
      * way to implement dynamic CSS based on component logic or external tokens.
      */
-    const tagStyles = css`
-      color: ${this.level === 1 ? ColorPrimary : ColorBody};
-      font-size: ${this.level === 1 ? `${FontHeading1.fontSize}px` : undefined};
-      text-align: ${this.textAlign};
-    `;
+    // const tagStyles = css`
+    //   color: ${this.level === 1 ? ColorPrimary : ColorBody};
+    //   font-size: ${this.level === 1 ? `${FontHeading1.fontSize}px` : undefined};
+    //   text-align: ${this.textAlign};
+    // `;
  
     return (
-      <Tag className={tagStyles} role="heading">
-        <slot></slot>
-      </Tag>
+      <Tag className={`align-${this.textAlign}`} role="heading">
+      <slot></slot>
+    </Tag>
     );
 
     /**

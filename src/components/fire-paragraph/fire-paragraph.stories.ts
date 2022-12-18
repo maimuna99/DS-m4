@@ -1,5 +1,5 @@
 export default{
-    title: 'Components/Paragraph'
+    title: 'Components/Typography/Paragraph'
 };
 
 export const Template =(args) => `

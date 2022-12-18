@@ -15,7 +15,7 @@
 }
 
 
-.HsHeader:H1{
+HsHeader:H1{
   width: 1189px;
   height: 70px;
   font-family: 'Suisse Intl';
@@ -23,6 +23,6 @@
   font-weight: 600;
   font-size: 64px;
   line-height: 70px;
-  color: #000000;
+  color: red;
   order: 1;
 }

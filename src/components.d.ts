@@ -99,10 +99,6 @@ export namespace Components {
          */
         "selectedIndex": number;
     }
-    interface HsnHeader {
-        "level": 1| 2 |3;
-        "textalign"?: 'left' | 'center' | 'right';
-    }
 }
 export interface HsButtonCustomEvent<T> extends CustomEvent<T> {
     detail: T;
@@ -237,12 +233,6 @@ declare global {
         prototype: HTMLHsTabsElement;
         new (): HTMLHsTabsElement;
     };
-    interface HTMLHsnHeaderElement extends Components.HsnHeader, HTMLStencilElement {
-    }
-    var HTMLHsnHeaderElement: {
-        prototype: HTMLHsnHeaderElement;
-        new (): HTMLHsnHeaderElement;
-    };
     interface HTMLElementTagNameMap {
         "fire-paragraph": HTMLFireParagraphElement;
         "hs-button": HTMLHsButtonElement;
@@ -264,7 +254,6 @@ declare global {
         "hs-tab-panel": HTMLHsTabPanelElement;
         "hs-tab-panels": HTMLHsTabPanelsElement;
         "hs-tabs": HTMLHsTabsElement;
-        "hsn-header": HTMLHsnHeaderElement;
     }
 }
 declare namespace LocalJSX {
@@ -362,10 +351,6 @@ declare namespace LocalJSX {
          */
         "selectedIndex"?: number;
     }
-    interface HsnHeader {
-        "level"?: 1| 2 |3;
-        "textalign"?: 'left' | 'center' | 'right';
-    }
     interface IntrinsicElements {
         "fire-paragraph": FireParagraph;
         "hs-button": HsButton;
@@ -387,7 +372,6 @@ declare namespace LocalJSX {
         "hs-tab-panel": HsTabPanel;
         "hs-tab-panels": HsTabPanels;
         "hs-tabs": HsTabs;
-        "hsn-header": HsnHeader;
     }
 }
 export { LocalJSX as JSX };
@@ -414,7 +398,6 @@ declare module "@stencil/core" {
             "hs-tab-panel": LocalJSX.HsTabPanel & JSXBase.HTMLAttributes<HTMLHsTabPanelElement>;
             "hs-tab-panels": LocalJSX.HsTabPanels & JSXBase.HTMLAttributes<HTMLHsTabPanelsElement>;
             "hs-tabs": LocalJSX.HsTabs & JSXBase.HTMLAttributes<HTMLHsTabsElement>;
-            "hsn-header": LocalJSX.HsnHeader & JSXBase.HTMLAttributes<HTMLHsnHeaderElement>;
         }
     }
 }
