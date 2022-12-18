@@ -100,6 +100,8 @@ export namespace Components {
         "selectedIndex": number;
     }
     interface HsnHeader {
+        "level": 1| 2 |3;
+        "textalign"?: 'left' | 'center' | 'right';
     }
 }
 export interface HsButtonCustomEvent<T> extends CustomEvent<T> {
@@ -361,6 +363,8 @@ declare namespace LocalJSX {
         "selectedIndex"?: number;
     }
     interface HsnHeader {
+        "level"?: 1| 2 |3;
+        "textalign"?: 'left' | 'center' | 'right';
     }
     interface IntrinsicElements {
         "fire-paragraph": FireParagraph;

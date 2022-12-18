@@ -1,3 +1,13 @@
 :host {
   display: block;
 }
+
+.textalign-right{
+  text-align: right;
+}
+.textalign-left{
+  text-align: left;
+}
+.textalign-center{
+  text-align: center;
+}     
