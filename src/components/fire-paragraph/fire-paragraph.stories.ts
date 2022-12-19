@@ -1,5 +1,6 @@
 export default{
     title: 'Components/Typography/Paragraph'
+
 };
 
 export const Template =(args) => `
@@ -9,9 +10,10 @@ export const Template =(args) => `
 `;
 
 export const DefaultParagraph =Template.bind({});
-DefaultParagraph.args={
-    text: 'I am a configuration piece of text'
-}
+DefaultParagraph.args = {
+    text:  'I am a configuration piece of text'
+  };
+
 
 export const AnotherParagraph =Template.bind({});
 AnotherParagraph.args={
